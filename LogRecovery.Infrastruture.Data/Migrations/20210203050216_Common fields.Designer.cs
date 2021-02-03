@@ -3,15 +3,17 @@ using System;
 using LogRecovery.Infrastruture.Data.Contexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace LogRecovery.Infrastruture.Data.Migrations
 {
     [DbContext(typeof(LogRecoveryContext))]
-    partial class LogRecoveryContextModelSnapshot : ModelSnapshot
+    [Migration("20210203050216_Common fields")]
+    partial class Commonfields
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -56,10 +58,10 @@ namespace LogRecovery.Infrastruture.Data.Migrations
                         new
                         {
                             Id = 1,
-                            DateCreated = new DateTime(2020, 2, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Deleted = false,
                             Ip = "192.168.0.1",
-                            RecordedTime = new DateTime(2020, 7, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            RecordedTime = new DateTime(2021, 2, 3, 2, 2, 15, 500, DateTimeKind.Local).AddTicks(2921),
                             UserAgent = "GET HTTP 1.0"
                         });
                 });

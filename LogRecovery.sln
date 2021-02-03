@@ -23,6 +23,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2-CrossCutting", "4.2-Cro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogRecovery.Infrastruture.Data", "LogRecovery.Infrastruture.Data\LogRecovery.Infrastruture.Data.csproj", "{B6557B5D-A5F2-447B-91E7-39F289896304}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogRecovery.Infrastruture.Ioc", "LogRecovery.Infrastruture.Ioc\LogRecovery.Infrastruture.Ioc.csproj", "{37527355-C2CF-4B64-A80F-DBBDD46CE354}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{B6557B5D-A5F2-447B-91E7-39F289896304}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6557B5D-A5F2-447B-91E7-39F289896304}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6557B5D-A5F2-447B-91E7-39F289896304}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37527355-C2CF-4B64-A80F-DBBDD46CE354}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37527355-C2CF-4B64-A80F-DBBDD46CE354}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37527355-C2CF-4B64-A80F-DBBDD46CE354}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37527355-C2CF-4B64-A80F-DBBDD46CE354}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -56,6 +62,7 @@ Global
 		{33EB83FF-C414-4D1C-809D-E948E8FE0EB5} = {FF5CC451-4762-4D5F-B803-17443D3408E6}
 		{773F032B-E37A-4EE9-843E-9C1BEB61322E} = {FF5CC451-4762-4D5F-B803-17443D3408E6}
 		{B6557B5D-A5F2-447B-91E7-39F289896304} = {33EB83FF-C414-4D1C-809D-E948E8FE0EB5}
+		{37527355-C2CF-4B64-A80F-DBBDD46CE354} = {773F032B-E37A-4EE9-843E-9C1BEB61322E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {79AF3B02-30B4-4169-8F88-16689BA6C099}

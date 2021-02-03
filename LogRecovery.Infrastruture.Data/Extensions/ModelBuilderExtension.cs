@@ -10,7 +10,16 @@ namespace LogRecovery.Infrastruture.Data.Extensions
         {
             builder.Entity<Log>()
                 .HasData(
-                    new Log { Id = 1, Ip = "192.168.0.1", RecordedTime = DateTime.Now, UserAgent = "GET HTTP 1.0" }
+                    new Log 
+                    { 
+                        Id = 1, 
+                        Ip = "192.168.0.1", 
+                        RecordedTime = new DateTime(2020, 07, 26), 
+                        UserAgent = "GET HTTP 1.0", 
+                        DateCreated = new DateTime(2020, 02, 05), 
+                        DateUpdated = null, 
+                        Deleted = false 
+                    }
                 ); 
             return builder;
         }

@@ -33,7 +33,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\LogRecovery.Application\LogRecovery.Application.csproj" />
     <ProjectReference Include="..\LogRecovery.Infrastruture.Data\LogRecovery.Infrastruture.Data.csproj" />
+    <ProjectReference Include="..\LogRecovery.Infrastruture.Ioc\LogRecovery.Infrastruture.Ioc.csproj" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using LogRecovery.Infrastruture.Data.Contexts;
 using Microsoft.EntityFrameworkCore;
+using LogRecovery.Infrastruture.Ioc;
 
 namespace LogRecovery
 {
@@ -23,6 +24,8 @@ namespace LogRecovery
         {
             services.AddControllersWithViews();
             services.AddDbContext<LogRecoveryContext>(option => option.UseNpgsql(Configuration.GetConnectionString("LogRecoveryConnection")).EnableSensitiveDataLogging());
+
+            NativeInjector.RegisterSevices(services);
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {

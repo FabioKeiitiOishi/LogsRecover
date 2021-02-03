@@ -14,6 +14,8 @@ namespace LogRecovery.Infrastruture.Data.Mappings
 
             builder.Property(x => x.RecordedTime).IsRequired();
 
+            builder.Property(x => x.DateCreated).IsRequired();
+
             builder.Property(x => x.UserAgent).HasMaxLength(100).IsRequired();
         }
     }
