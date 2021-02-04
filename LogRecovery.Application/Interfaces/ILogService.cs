@@ -1,11 +1,11 @@
-﻿using LogRecovery.Domain.Entities;
+﻿using LogRecovery.Application.ViewModels;
 using System.Collections.Generic;
 
 namespace LogRecovery.Application.Interfaces
 {
     public interface ILogService
     {
-        IEnumerable<Log> Get();
-        bool Post(Log log);
+        List<LogVM> Get();
+        bool Post(LogVM log);
     }
 }

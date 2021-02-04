@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\LogRecovery.Application\LogRecovery.Application.csproj" />
+    <ProjectReference Include="..\LogRecovery.Infrastruture.Data\LogRecovery.Infrastruture.Data.csproj" />
   </ItemGroup>
 
 </Project>

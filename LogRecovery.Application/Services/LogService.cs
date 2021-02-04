@@ -1,19 +1,34 @@
 ﻿using LogRecovery.Application.Interfaces;
+using LogRecovery.Application.ViewModels;
 using LogRecovery.Domain.Entities;
+using LogRecovery.Domain.Interfaces;
 using System.Collections.Generic;
 
 namespace LogRecovery.Application.Services
 {
     public class LogService : ILogService
     {
-        public IEnumerable<Log> Get()
+        private readonly ILogRepository _logRepository;
+
+        public LogService(ILogRepository logRepository)
         {
-            throw new System.NotImplementedException();
+            _logRepository = logRepository;
+        }
+        public bool Post(LogVM log)
+        {
+            return true;
         }
 
-        public bool Post(Log log)
+        public List<LogVM> Get()
         {
-            throw new System.NotImplementedException();
+            List<LogVM> logsVM = new List<LogVM>();
+            IEnumerable<Log> logs = _logRepository.GetAll();
+
+            foreach (var log in logs)
+            {
+                logsVM.Add(new LogVM { Id = log.Id, Ip = log.Ip, RecordedTime = log.RecordedTime, UserAgent = log.UserAgent });
+            }
+            return logsVM;
         }
     }
 }
