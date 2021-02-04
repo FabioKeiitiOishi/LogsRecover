@@ -1,4 +1,5 @@
 ﻿using LogRecovery.Application.Interfaces;
+using LogRecovery.Application.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LogRecovery.Controllers
@@ -18,6 +19,12 @@ namespace LogRecovery.Controllers
         public ActionResult Get()
         {
             return Ok(_logService.Get());
+        }
+
+        [HttpPost]
+        public ActionResult Post(LogVM model)
+        {
+            return Ok(_logService.Post(model));
         }
     }
 }

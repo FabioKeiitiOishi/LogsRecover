@@ -1,11 +1,43 @@
 ﻿using LogRecovery.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
+using Microsoft.EntityFrameworkCore.Metadata;
+using LogRecovery.Domain.Models;
 
 namespace LogRecovery.Infrastruture.Data.Extensions
 {
     public static class ModelBuilderExtension
     {
+        public static ModelBuilder ApplyGlobalConfigurations(this ModelBuilder modelBuilder)
+        {
+            foreach (IMutableEntityType entityType in modelBuilder.Model.GetEntityTypes())
+            {
+                foreach (IMutableProperty property in entityType.GetProperties())
+                {
+                    switch (property.Name)
+                    {
+                        case nameof(Entity.Id):
+                            property.IsKey();
+                            break;
+                        case nameof(Entity.DateUpdated):
+                            property.IsNullable = true;
+                            break;
+                        case nameof(Entity.DateCreated):
+                            property.IsNullable = false;
+                            property.SetDefaultValue(DateTime.Now);
+                            break;
+                        case nameof(Entity.Deleted):
+                            property.IsNullable = false;
+                            property.SetDefaultValue(false);
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            }
+            return modelBuilder;
+        }
+
         public static ModelBuilder SeedData(this ModelBuilder builder)
         {
             builder.Entity<Log>()

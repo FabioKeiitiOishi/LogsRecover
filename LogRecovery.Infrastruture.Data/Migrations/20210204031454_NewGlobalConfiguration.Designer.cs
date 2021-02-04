@@ -3,15 +3,17 @@ using System;
 using LogRecovery.Infrastruture.Data.Contexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace LogRecovery.Infrastruture.Data.Migrations
 {
     [DbContext(typeof(LogRecoveryContext))]
-    partial class LogRecoveryContextModelSnapshot : ModelSnapshot
+    [Migration("20210204031454_NewGlobalConfiguration")]
+    partial class NewGlobalConfiguration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

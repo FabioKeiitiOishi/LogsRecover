@@ -2,6 +2,7 @@
 using LogRecovery.Application.ViewModels;
 using LogRecovery.Domain.Entities;
 using LogRecovery.Domain.Interfaces;
+using System;
 using System.Collections.Generic;
 
 namespace LogRecovery.Application.Services
@@ -14,8 +15,16 @@ namespace LogRecovery.Application.Services
         {
             _logRepository = logRepository;
         }
-        public bool Post(LogVM log)
+        public bool Post(LogVM model)
         {
+            Log log = new Log
+            {
+                Ip = model.Ip,
+                RecordedTime = model.RecordedTime,
+                UserAgent = model.UserAgent
+            };
+
+            _logRepository.Create(log);
             return true;
         }
 

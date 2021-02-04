@@ -18,6 +18,7 @@ namespace LogRecovery.Infrastruture.Data.Contexts
         {
             modelBuilder.ApplyConfiguration(new LogMap());
 
+            modelBuilder.ApplyGlobalConfigurations();
             modelBuilder.SeedData();
 
             base.OnModelCreating(modelBuilder);
