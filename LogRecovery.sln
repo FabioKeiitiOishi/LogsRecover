@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogRecovery", "LogRecovery\LogRecovery.csproj", "{AC4A9417-B2D4-42DC-ACD6-E8C38A0DFAEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogRecovery", "LogRecovery\LogRecovery.csproj", "{AC4A9417-B2D4-42DC-ACD6-E8C38A0DFAEB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-Web", "1-Web", "{8ED317BA-7109-4FFB-9247-AC0F93B2FE75}"
 EndProject
@@ -13,17 +13,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3-Domain", "3-Domain", "{F7
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4-Infrastruture", "4-Infrastruture", "{FF5CC451-4762-4D5F-B803-17443D3408E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogRecovery.Application", "LogRecovery.Application\LogRecovery.Application.csproj", "{52843F3C-5014-42C0-BD8B-E542CB321CCD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogRecovery.Application", "LogRecovery.Application\LogRecovery.Application.csproj", "{52843F3C-5014-42C0-BD8B-E542CB321CCD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogRecovery.Domain", "LogRecovery.Domain\LogRecovery.Domain.csproj", "{1DB77437-370C-418D-86FE-2DB649B2BD94}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogRecovery.Domain", "LogRecovery.Domain\LogRecovery.Domain.csproj", "{1DB77437-370C-418D-86FE-2DB649B2BD94}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1-Data", "4.1-Data", "{33EB83FF-C414-4D1C-809D-E948E8FE0EB5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2-CrossCutting", "4.2-CrossCutting", "{773F032B-E37A-4EE9-843E-9C1BEB61322E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogRecovery.Infrastruture.Data", "LogRecovery.Infrastruture.Data\LogRecovery.Infrastruture.Data.csproj", "{B6557B5D-A5F2-447B-91E7-39F289896304}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogRecovery.Infrastruture.Data", "LogRecovery.Infrastruture.Data\LogRecovery.Infrastruture.Data.csproj", "{B6557B5D-A5F2-447B-91E7-39F289896304}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogRecovery.Infrastruture.Ioc", "LogRecovery.Infrastruture.Ioc\LogRecovery.Infrastruture.Ioc.csproj", "{37527355-C2CF-4B64-A80F-DBBDD46CE354}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogRecovery.Infrastruture.Ioc", "LogRecovery.Infrastruture.Ioc\LogRecovery.Infrastruture.Ioc.csproj", "{37527355-C2CF-4B64-A80F-DBBDD46CE354}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0-Tests", "0-Tests", "{0170A1E8-EEBA-4DF7-9572-0999A32471A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogRecovery.Application.Test", "LogRecovery.Application.Test\LogRecovery.Application.Test.csproj", "{BDC21744-A340-4A6D-8CF0-4211D5229E64}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +55,10 @@ Global
 		{37527355-C2CF-4B64-A80F-DBBDD46CE354}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37527355-C2CF-4B64-A80F-DBBDD46CE354}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37527355-C2CF-4B64-A80F-DBBDD46CE354}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDC21744-A340-4A6D-8CF0-4211D5229E64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDC21744-A340-4A6D-8CF0-4211D5229E64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDC21744-A340-4A6D-8CF0-4211D5229E64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDC21744-A340-4A6D-8CF0-4211D5229E64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,6 +71,7 @@ Global
 		{773F032B-E37A-4EE9-843E-9C1BEB61322E} = {FF5CC451-4762-4D5F-B803-17443D3408E6}
 		{B6557B5D-A5F2-447B-91E7-39F289896304} = {33EB83FF-C414-4D1C-809D-E948E8FE0EB5}
 		{37527355-C2CF-4B64-A80F-DBBDD46CE354} = {773F032B-E37A-4EE9-843E-9C1BEB61322E}
+		{BDC21744-A340-4A6D-8CF0-4211D5229E64} = {0170A1E8-EEBA-4DF7-9572-0999A32471A4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {79AF3B02-30B4-4169-8F88-16689BA6C099}

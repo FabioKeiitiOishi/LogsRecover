@@ -12,7 +12,7 @@ namespace LogRecovery.Domain.Interfaces
         bool Update(TEntity model);
         bool Delete(TEntity model);
         int Save();
-        TEntity Find(params object[] keys);
+        TEntity Find(Expression<Func<TEntity, bool>> where);
         IQueryable<TEntity> Query(Expression<Func<TEntity, bool>> where);
     }
 }

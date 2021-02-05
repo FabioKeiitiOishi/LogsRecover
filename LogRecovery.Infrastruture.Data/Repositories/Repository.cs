@@ -88,11 +88,11 @@ namespace LogRecovery.Infrastruture.Data.Repositories
             }
         }
 
-        public TEntity Find(params object[] keys)
+        public TEntity Find(Expression<Func<TEntity, bool>> where)
         {
             try
             {
-                return DbSet.Find(keys);
+                return DbSet.AsNoTracking().FirstOrDefault(where);
             }
             catch (Exception)
             {
