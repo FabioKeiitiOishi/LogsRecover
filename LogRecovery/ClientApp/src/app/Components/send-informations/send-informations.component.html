@@ -1,0 +1,21 @@
+<div>
+  <p>Cadastre aqui os dados de seu log, para isso preencha os campos abaixo:</p>
+
+  <form action="" class="send-informations-container">
+    <div class="send-informations-content">
+      <label>IP:</label>
+      <input type="text" name="ip" placeholder="IP" [(ngModel)]="log.ip" />
+    </div>
+    <div class="send-informations-content">
+      <label>Data do log:</label>
+      <input type="date" name="recordedTime" [(ngModel)]="log.recordedTime" (ngModelChange)="recordedTime = $event" />
+    </div>
+    <div class="send-informations-content">
+      <label>Agente HTTP:</label>
+      <input type="text" name="userAgent" placeholder="UserAgent" [(ngModel)]="log.userAgent" />
+    </div>
+  </form>
+  <div class="send-informations-container-button">
+    <button (click)="createLog()">Enviar</button>
+  </div>
+</div>

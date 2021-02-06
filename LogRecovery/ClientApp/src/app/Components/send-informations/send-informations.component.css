@@ -1,0 +1,18 @@
+.send-informations-container {
+  display: flex;
+  flex-direction: row;
+}
+  .send-informations-container .send-informations-content {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    height: 28px;
+  }
+    .send-informations-container .send-informations-content label {
+        margin-right: 6px;
+    }
+.send-informations-container-button {
+    display: flex;
+    width: 700px;
+    margin: 20px;
+}

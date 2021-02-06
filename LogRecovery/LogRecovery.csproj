@@ -35,9 +35,27 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\Components\file-upload\file-upload.component.ts" />
+    <None Remove="ClientApp\src\app\Components\send-informations\send-informations.component.ts" />
+    <None Remove="ClientApp\src\app\Components\update-data\update-data.component.ts" />
+    <None Remove="ClientApp\src\app\send-data\send-data.component.ts" />
+    <None Remove="ClientApp\src\log.model.ts" />
+    <None Remove="ClientApp\src\log.services.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\LogRecovery.Application\LogRecovery.Application.csproj" />
     <ProjectReference Include="..\LogRecovery.Infrastruture.Data\LogRecovery.Infrastruture.Data.csproj" />
     <ProjectReference Include="..\LogRecovery.Infrastruture.Ioc\LogRecovery.Infrastruture.Ioc.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\Components\file-upload\file-upload.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\Components\send-informations\send-informations.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\Components\update-data\update-data.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\send-data\send-data.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\log.model.ts" />
+    <TypeScriptCompile Include="ClientApp\src\log.services.ts" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

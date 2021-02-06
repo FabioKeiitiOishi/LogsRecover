@@ -1,0 +1,24 @@
+.update-data-container {
+  display: flex;
+  flex-direction: row;
+}
+
+  .update-data-container .update-data-content {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    height: 28px;
+  }
+
+    .update-data-container .update-data-content label {
+      margin-right: 6px;
+    }
+
+.update-data-container-button {
+  display: flex;
+  width: 700px;
+  margin: 20px;
+}
+  .update-data-container-button button {
+      margin-right: 20px;
+  }

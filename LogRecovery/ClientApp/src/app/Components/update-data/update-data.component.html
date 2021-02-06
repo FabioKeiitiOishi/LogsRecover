@@ -1,0 +1,23 @@
+<div>
+  <p>Log selecionado, altere o que achar necessário:</p>
+
+  <form action="" class="update-data-container">
+    <input type="hidden" name="id" value="{{ log.id }}" />
+    <div class="update-data-content">
+      <label>IP:</label>
+      <input type="text" name="ip" placeholder="IP" [(ngModel)]="log.ip" />
+    </div>
+    <div class="update-data-content">
+      <label>Data do log:</label>
+      <input type="date" name="recordedTime" [(ngModel)]="log.recordedTime" (ngModelChange)="recordedTime = $event" />
+    </div>
+    <div class="update-data-content">
+      <label>Agente HTTP:</label>
+      <input type="text" name="userAgent" placeholder="UserAgent" [(ngModel)]="log.userAgent" />
+    </div>
+  </form>
+  <div class="update-data-container-button">
+    <button (click)="updateLog()">Enviar</button>
+    <button (click)="cancel()">Cancelar</button>
+  </div>
+</div>

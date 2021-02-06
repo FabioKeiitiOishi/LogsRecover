@@ -1,13 +1,12 @@
-<h1 id="tableLabel">Weather forecast</h1>
+<h2 id="tableLabel">Logs Recuperados</h2>
 
-<p>This component demonstrates fetching data from the server.</p>
+<p>Estes são os logs presentes em nosso banco de dados.</p>
 
 <p *ngIf="!logs"><em>Loading...</em></p>
 
 <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="logs">
   <thead>
     <tr>
-      <th>ID</th>
       <th>IP</th>
       <th>Data do Log</th>
       <th>Agente do arquivo</th>
@@ -16,11 +15,10 @@
   </thead>
   <tbody>
     <tr *ngFor="let log of logs">
-      <td>{{ log.id }}</td>
       <td>{{ log.ip }}</td>
-      <td>{{ log.dateRecovery }}</td>
+      <td>{{ log.recordedTime | date:'dd/MM/yyyy' }}</td>
       <td>{{ log.userAgent }}</td>
-      <td><button>Editar</button></td>
+      <td><button routerLink="/update-data/{{ log.id }}">Editar</button></td>
       <td><button>Excluir</button></td>
     </tr>
   </tbody>
