@@ -11,8 +11,8 @@
       <input type="date" name="recordedTime" [(ngModel)]="log.recordedTime" (ngModelChange)="recordedTime = $event" />
     </div>
     <div class="send-informations-content">
-      <label>Agente HTTP:</label>
-      <input type="text" name="userAgent" placeholder="UserAgent" [(ngModel)]="log.userAgent" />
+      <label>User-Agent(Agregação):</label>
+      <input type="text" class="user-agent-text" name="userAgent" placeholder="User Agent" [(ngModel)]="log.userAgent"/>
     </div>
   </form>
   <div class="send-informations-container-button">

@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { LogVM } from '../../../log.model';
 import { LogServices } from '../../../log.services';
@@ -36,7 +36,7 @@ export class UpdateDataComponent {
     this.logServices.update(this.baseUrl, this.log).subscribe(() => {
       alert('Log atualizado com sucesso!');
       this.router.navigate(['']);
-    });
+    }, error => alert(error));
   }
 
   cancel(): void {

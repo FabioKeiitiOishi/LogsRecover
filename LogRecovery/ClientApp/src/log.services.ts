@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { LogVM } from './log.model';
 
@@ -8,7 +7,7 @@ import { LogVM } from './log.model';
   providedIn: 'root'
 })
 export class LogServices {
-  constructor(private router: Router, private http: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
   create(log: LogVM, baseUrl: string): Observable<boolean> {
     return this.http.post<boolean>(baseUrl + 'api/log', log);

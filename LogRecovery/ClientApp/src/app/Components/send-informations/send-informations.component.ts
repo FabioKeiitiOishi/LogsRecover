@@ -25,6 +25,6 @@ export class SendInformationsComponent {
     this.logServices.create(this.log, this.baseUrl).subscribe(() => {
       alert('Log salvo!');
       this.router.navigate(['']);
-    });
+    }, error => alert(error));
   }
 }

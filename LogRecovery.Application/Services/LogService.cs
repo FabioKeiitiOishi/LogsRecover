@@ -72,8 +72,11 @@ namespace LogRecovery.Application.Services
             Log log = _logRepository.Find(x => x.Id == model.Id && !x.Deleted);
             if (log == null)
                 throw new Exception("Log is not found");
-
+            DateTime dateCreated = log.DateCreated;
             log = _mapper.Map<Log>(model);
+
+            log.DateCreated = dateCreated;
+            log.DateUpdated = DateTime.Now;
             _logRepository.Update(log);
 
             return true;
@@ -88,6 +91,7 @@ namespace LogRecovery.Application.Services
             if (log == null)
                 throw new Exception("Log is not found");
 
+            log.DateUpdated = DateTime.Now;
             return _logRepository.Delete(log);
         }
     }

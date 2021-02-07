@@ -9,7 +9,7 @@
     <tr>
       <th>IP</th>
       <th>Data do Log</th>
-      <th>Agente do arquivo</th>
+      <th>User-Agent(Agregação)</th>
       <th colspan="2"></th>
     </tr>
   </thead>
@@ -19,7 +19,7 @@
       <td>{{ log.recordedTime | date:'dd/MM/yyyy' }}</td>
       <td>{{ log.userAgent }}</td>
       <td><button routerLink="/update-data/{{ log.id }}">Editar</button></td>
-      <td><button>Excluir</button></td>
+      <td><button (click)="delete(log.id)">Excluir</button></td>
     </tr>
   </tbody>
 </table>

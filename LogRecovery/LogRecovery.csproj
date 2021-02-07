@@ -38,6 +38,7 @@
     <None Remove="ClientApp\src\app\Components\file-upload\file-upload.component.ts" />
     <None Remove="ClientApp\src\app\Components\send-informations\send-informations.component.ts" />
     <None Remove="ClientApp\src\app\Components\update-data\update-data.component.ts" />
+    <None Remove="ClientApp\src\app\file-upload.service.ts" />
     <None Remove="ClientApp\src\app\send-data\send-data.component.ts" />
     <None Remove="ClientApp\src\log.model.ts" />
     <None Remove="ClientApp\src\log.services.ts" />
@@ -53,6 +54,7 @@
     <TypeScriptCompile Include="ClientApp\src\app\Components\file-upload\file-upload.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\Components\send-informations\send-informations.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\Components\update-data\update-data.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\file-upload.service.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\send-data\send-data.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\log.model.ts" />
     <TypeScriptCompile Include="ClientApp\src\log.services.ts" />

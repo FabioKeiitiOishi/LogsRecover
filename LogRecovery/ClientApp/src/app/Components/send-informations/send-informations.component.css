@@ -11,8 +11,11 @@
     .send-informations-container .send-informations-content label {
         margin-right: 6px;
     }
-.send-informations-container-button {
-    display: flex;
-    width: 700px;
-    margin: 20px;
-}
+    .send-informations-container .send-informations-content .user-agent-text {
+        width: 400px
+    }
+    .send-informations-container-button {
+      display: flex;
+      width: 700px;
+      margin: 20px;
+    }

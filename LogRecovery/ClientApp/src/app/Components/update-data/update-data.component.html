@@ -9,7 +9,7 @@
     </div>
     <div class="update-data-content">
       <label>Data do log:</label>
-      <input type="date" name="recordedTime" [(ngModel)]="log.recordedTime" (ngModelChange)="recordedTime = $event" />
+      <input type="date" name="recordedTime" [ngModel]="log.recordedTime | date:'yyyy-MM-dd'" (ngModel)="log.recordedTime" (ngModelChange)="log.recordedTime = $event" />
     </div>
     <div class="update-data-content">
       <label>Agente HTTP:</label>

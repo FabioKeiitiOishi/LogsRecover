@@ -1,0 +1,7 @@
+.file-upload-container {
+    display: flex;
+    flex-direction: column;
+}
+.file-upload-container-button {
+  margin: 20px 0px;
+}
